@@ -1,0 +1,7 @@
+{
+  "name": "social-media",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
