@@ -18,6 +18,7 @@ class User(BaseModel):
     firstName: Optional[str]
     lastName: Optional[str]
     email: str
+    contacts: Optional[list]
     createdAt: datetime = datetime.utcnow()
     lastSeen: datetime = datetime.utcnow()
 
