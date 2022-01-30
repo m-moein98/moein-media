@@ -1,0 +1,10 @@
+<div>
+  <form [formGroup]="loginForm">
+    <input type="text" formControlName="username">
+    <input type="password" formControlName="password">
+
+  </form>
+  <button (click)="onSubmit()">
+    login
+  </button>
+</div>

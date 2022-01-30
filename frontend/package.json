@@ -5,8 +5,9 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.ts --o --port 4200",
     "build": "ng build",
+    "build-android": "ionic cordova build android",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
