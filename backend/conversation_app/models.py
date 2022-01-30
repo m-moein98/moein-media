@@ -5,5 +5,5 @@ from bson.objectid import ObjectId
 
 
 class Conversation(BaseModel):
-    users: list[ObjectId]
+    usersId: list[ObjectId]
     messages: list[str]
