@@ -30,7 +30,7 @@ async def get_token(form_data: OAuth2PasswordRequestForm = Depends()):
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-@api_router.post("/create-user")
+@api_router.post("/api/create-user")
 async def create_user(username: str, password: str, email: str):
     user = User(
         username=username, password=get_password_hash(password), email=email)
@@ -39,14 +39,14 @@ async def create_user(username: str, password: str, email: str):
     return user_serilaizer(instance)
 
 
-@api_router.get("/get-user")
+@api_router.get("/api/get-user")
 async def get_user_data(token: str = Depends(oauth2_scheme)):
     token = token_collection.find_one({"token": token})
     user = user_collection.find_one({"_id": ObjectId(token["userId"])})
     return user_serilaizer(user)
 
 
-@api_router.put("/update-user")
+@api_router.put("/api/update-user")
 async def update_user(user: UpdateUser, token: str = Depends(oauth2_scheme)):
     token_instance = token_collection.find_one({"token": token})
     if not token_instance:
