@@ -7,5 +7,5 @@ def user_serilaizer(user) -> dict:
         "lastName": user["lastName"],
         "email": user["email"],
         "createdAt": user["createdAt"],
-        "updatedAt": user["updatedAt"]
+        "lastSeen": user["lastSeen"]
     }

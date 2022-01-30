@@ -19,7 +19,7 @@ class User(BaseModel):
     lastName: Optional[str]
     email: str
     createdAt: datetime = datetime.utcnow()
-    updatedAt: datetime = datetime.utcnow()
+    lastSeen: datetime = datetime.utcnow()
 
 class UpdateUser(BaseModel):
     class Config:
