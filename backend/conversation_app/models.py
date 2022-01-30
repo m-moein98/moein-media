@@ -5,5 +5,7 @@ from bson.objectid import ObjectId
 
 
 class Conversation(BaseModel):
+    class Config:
+        arbitrary_types_allowed = True
     usersId: list[ObjectId]
     messages: list[str]
